@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contador simples estilo Pomodoro">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="js/main.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <title>FocusTimer</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section id="timer">
+                <div id="counter">
+                    <span id="minutes">25</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </div>
+
+                <div id="controls">
+                    <button
+                        data-action="toggleRunning"
+                        class="ph ph-play-circle">
+                    </button>
+
+                    <button 
+                        data-action="toggleRunning"
+                        class="ph ph-stop-circle">
+                    </button>
+
+                    <button 
+                        class="ph ph-plus-circle"
+                        data-action="add">
+                    </button>
+
+                    <button 
+                        data-action="decrease"
+                        class="ph ph-minus-circle">
+                    </button>
+                </div>
+            </section>
+
+            <section id="sounds">
+                <button 
+                    data-action="toggleSound"
+                    data-sound="forest"
+                    class="ph ph-tree">
+                </button>
+                
+                <button 
+                    data-action="toggleSound"
+                    data-sound="rain"
+                    class="ph ph-cloud-snow">
+                </button>
+                
+                <button 
+                    data-action="toggleSound"
+                    data-sound="coffee"
+                    class="ph ph-storefront">
+                </button>
+                
+                <button 
+                    data-action="toggleSound"
+                    data-sound="campfire"
+                    class="ph ph-campfire">
+                </button>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

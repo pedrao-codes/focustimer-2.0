@@ -1,0 +1,93 @@
+:root {
+    font-size: 62.5%;
+
+    --font-general: 'Roboto', sans-serif;
+
+    --color-bg: #ffffff;
+    --color-text: hsl(240, 6%, 21%);
+    --color-card: hsl(240, 9%, 89%);
+    --color-card-selected: hsl(194, 97%, 31%);
+    --color-text-selected: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+body {
+    font-family: var(--font-general);   
+}
+
+body, button {
+    color: var(--color-text);
+}
+
+main {
+    display: flex;
+    gap: 19.2rem;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#counter {
+    display: flex;
+    font-size: 12.6rem;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+#controls button {
+    background: transparent;
+}
+
+button {
+    font-size: 4.8rem;
+    line-height: 0;
+    border: 0;
+    cursor: pointer;
+    transition: transform 200ms;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#sounds {
+    display: grid;
+    grid-template-areas: 'a b'
+                         'c d';
+    grid-gap: 3.2rem;
+}
+
+#sounds button {
+    width: 14rem;
+    height: 15rem;
+    border-radius: 2.4rem;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
+
+.selected-button {
+    background: var(--color-card-selected);
+    transform: scale(1.1);
+    color: var(--color-text-selected)
+}
